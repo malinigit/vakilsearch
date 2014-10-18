@@ -12,10 +12,6 @@ class FindlawyerController < ApplicationController
 
   end 
 
-  def total_service
-
-  end 
-
   def show
   	
     session[:location] = ''

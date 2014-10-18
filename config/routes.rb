@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   get 'findlawyer/index'
 
-  get 'findlawyer/new'
+  # get 'findlawyer/new'
 
   get 'findlawyer/show'
 
-  get 'findlawyer/edit'
+  # get 'findlawyer/edit'
 
   post 'findlawyer/search'
   
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   
   post 'findlawyer/list'
    
-  get 'findlawyer/total_service'
+  # get 'findlawyer/total_service'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
