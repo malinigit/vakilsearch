@@ -1,0 +1,42 @@
+
+<head>
+        <script type="text/javascript">
+            function callMe()
+            {
+            	
+              if (document.getElementById("citylist_location").value == '')
+              	{
+              		alert("Please select the location");
+              		 
+              		return false;
+              	}
+              		else
+              	{	
+              		
+            		return true;
+            	}
+                
+            }
+
+         
+        </script>
+    </head>
+
+<%= form_for @city ,:url=> {:action => 'search'} do |f| %>		
+<td>
+	<%= f.collection_select(:location, @obj,:location, :location, {:include_blank => 'Select Location',:selected => session[:location]} ,{style: "width: 240px; color: black; background-color: white; font-family:Helvetica;font-size:19px;font-weight:normal;"})%>
+</td>
+<td>
+	<%= f.submit 'Search Services',:onclick => 'return callMe();', :style => "width: 240px; color: white; background-color: black; font-family:Helvetica;font-size:19px;font-weight:normal;"%>
+</td>
+<% end %>
+<br>
+<br>
+<%= form_for @city ,:url=> {:action => 'list'} do |f| %>
+<td>
+	<%= f.collection_select(:name,@obj1,:servicename, :servicename,{ :include_blank => 'Select Services' },{style: "width: 240px; color: black; background-color: white; font-family:Helvetica;font-size:19px;font-weight:normal;"})%>
+</td>
+<td>
+	<%= f.submit 'Lawerys List' ,:style => "width: 240px; color: white; background-color: black; font-family:Helvetica;font-size:19px;font-weight:normal;"%>
+</td>
+<% end %>

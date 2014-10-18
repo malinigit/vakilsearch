@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Searchlawyer</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ 
+ 
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ 
+  <%= csrf_meta_tags %>
+
+
+</head>
+<body style="background-color: gray;">
+<table width="926" height="100" align="center" border="0"  background="/assets/toplogo.png"bordercolor="#000000" cellpadding="0" cellspacing="0">
+	
+	<td>
+
+	<table width="745" height="13"  background="/assets/menu.png"  align="right"border="0" bordercolor="#000000" cellpadding="0" cellspacing="0">
+
+	<td> 
+  
+  		<%=link_to image_tag("home.png",:border => 0,:title=>'Home'), {:action => 'index', :controller => 'findlawyer'}%>
+
+  	</td> 
+
+	<td> 
+
+	<%=link_to image_tag("services.png",:border => 0,:title=>'Lawyers Services List'), {:action => 'show', :controller => 'findlawyer'}%>
+
+	</td>
+
+</table>
+
+	</td>
+
+</table>
+
+<%= yield %>
+
+
+
+</body>
+</html>

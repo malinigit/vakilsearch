@@ -1,0 +1,2 @@
+module FindlawyerHelper
+end
